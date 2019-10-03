@@ -1,0 +1,111 @@
+  <div class='summary_section'>
+    <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading header"> Emergency Transfer Summary (Form 34L-D)</div>
+
+    <!-- Table -->
+    <table class="table table-bordered">
+      <tbody>
+        <tr>
+          <td colspan="8" class='header'>
+            Transferring Facility
+          </td>
+        </tr>
+        <tr class='no-bottom-border'>
+          <td>
+            Name:
+          </td>
+          <td colspan="7">
+          </td>
+        </tr>
+        <tr class='content-font' >
+          <td >
+            <%= @facility.name %>
+          </td>
+          <td colspan="7">
+
+          </td>
+        </tr>
+         <tr>
+          <td colspan="8" class='header'>
+            Patient Information
+          </td>
+        </tr>
+         <tr  class='no-bottom-border'>
+          <td>
+            First Name
+          </td>
+          <td>
+           Middle Name
+          </td>
+          <td>
+           Last Name
+          </td>
+          <td>
+           Medical Record (MR)
+          </td>
+          <td class='no-right-border'>
+          </td>
+           <td class='no-right-border'>
+          </td>
+          <td class='no-right-border'>
+          </td>
+          <td>
+          </td>
+        </tr>
+         <tr class='content-font'>
+          <td>
+          <%= @patient.first_name%>
+          </td>
+          <td>
+            <%= @patient.middle_name%>
+          </td>
+          <td>
+            <%= @patient.last_name%>
+          </td>
+          <td>
+            <%= @patient.mr%>
+          </td>
+          <td class='no-right-border'>
+          </td>
+           <td class='no-right-border'>
+          </td>
+          <td class='no-right-border'>
+          </td>
+          <td>
+          </td>
+        </tr>
+          <tr class='no-bottom-border'>
+          <td colspan="8" class='header'>
+            Summary
+          </td>
+        </tr>
+        <tr>
+          <td colspan="8" class='content-font'>
+          <p>
+This <%= @patient.age %> years old <%=@patient.gender %> was admitted to <%= @facility.name %> on <%= @patient.admission.date%> at <%= @patient.admission.time%>  due to <%=@patient.admission.diagnoses_descriptions_and_codes %>. The observed symptoms on admission were <%=@patient.admission.symptoms_descriptions %>.  <%=@patient.admission.observations_descriptions %>.
+          </p>
+          <p>
+            Upon asking about known allergies, the patient disclosed <%=@patient.allergies_descriptions %>. Upon asking about chronic conditions, the patient disclosed <%= @patient.chronic_conditions_descriptions%>. The patient was administered with <%= @patient.medications_descriptions %>.
+          </p>
+
+          <p>
+          The staff performed <%= @patient.diagnostic_procedures_descriptions %> , revealing <%= @patient.diagnoses_descriptions_and_codes %>. Our team proceeded to <%=@patient.treatments_descriptions %>.
+          </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+      <!-- Table -->
+    </div>
+    <div class ='row'>
+    <div class="col-md-2"></div>
+    <div class="col-md-2"></div>
+    <div class="col-md-2"></div>
+    <div class="col-md-2"></div>
+    <div class="col-md-2"></div>
+    <div class="col-md-2">  <button onclick = 'window.print();'>Print Page</button>
+      </div>
+    </div>
+
+  </div>

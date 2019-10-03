@@ -1,24 +1,25 @@
-# README
+## Ruby Version Requirement
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* `2.4.0`
 
-Things you may want to cover:
+## How to run the application
 
-* Ruby version
+* `bundle install`
+* `bundle exec rake db:reset`
+* `bundle exec rails s`
+* Sample patients to enter from the list: `John Smith` and : `Amy Hill`
 
-* System dependencies
+## How to run specs
+* `bundle install`
+* `RAILS_ENV=test bundle exec rake db:reset`
+* `bundle exec rspec`
 
-* Configuration
+## TODO list for future improvements
+* Add yml files for all wordings in the app.
+* Add JavaScript specs.
+* Improve ruby specs.
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...

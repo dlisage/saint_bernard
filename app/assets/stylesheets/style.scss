@@ -1,0 +1,36 @@
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+.summary_section{
+  .header {
+    font-weight: bold;
+  }
+
+  margin-top: 50px;
+
+  td {
+    width: 12%;
+  }
+
+  tr.no-bottom-border td{
+    border-bottom-style: hidden;
+  }
+
+  td.no-right-border {
+    border-right-style: hidden;
+  }
+
+  .content-font {
+    color: #1E90FF;
+  }
+}
+
+ li.ui-menu-item {
+  list-style-type: none;
+}
